@@ -77,14 +77,6 @@ contract SkillsMarketplace {
     // - Emit an event
     function applyForGig(uint256 gigId) public {
         // Your implementation here
-        function applyForGig(uint256 gigId) public {
-    require(hasApplied[gigId][msg.sender] == false, "Already applied");
-
-    hasApplied[gigId][msg.sender] = true;
-
-    emit AppliedForGig(gigId, msg.sender);
-}
-
     }
     
     // TODO: Implement submitWork function

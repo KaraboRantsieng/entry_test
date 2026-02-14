@@ -29,11 +29,11 @@
 - **C)** Use ERC-721 exclusively, store all data off-chain for gas savings, and require buyers to use MetaMask with manual price negotiations.  
 - **D)** Build everything as separate NFT collections with no DEX integration since farmers won't understand DeFi protocols.  
 
-**Your Answer:** [A/B/C/D]  
+**Your Answer:** [B]  
 
 **Your Reasoning:**  
 [2–3 sentences explaining why you chose this answer. What makes it the best choice?]  
-
+By design ERC-1155 will store reputation of the farmer and this will ensure that there's transperacy. They will be in charge of how they conduct business.
 ---
 
 ### Question 2: Cost Optimisation (Practical Aptitude)
@@ -53,16 +53,16 @@ A farmer wants to list 50 bags of maize. Gas costs are:
 - **C)** They cost exactly the same  
 - **D)** ERC-1155 is cheaper by approximately $54  
 
-**Your Answer:** [A/B/C/D]  
+**Your Answer:** [A]  
 
 **Your Calculation/Reasoning:**  
-- ERC-721 cost = [Show calculation]
-- ERC-1155 cost = [Show calculation]
+- ERC-721 cost = [100 000 * 50 = 5 000 000 | 5 000 000 * 3 000 ]
+- ERC-1155 cost = [150 000 * 50 = 7 500 000 | 7 500 000 * 3 000 ]
 - Difference = [Show calculation]
 
 
 [Explain why gas optimisation matters for African users]  
-
+When the costs are high it is not good for the business. 
 ---
 
 ### Question 3: Value Proposition Explanation (Communication & Thinking)
@@ -76,11 +76,11 @@ A farmer asks: *"Why can't we just use a normal website with a database?"*
 - **C)** "Because smart contracts are more secure than databases and Web3 is decentralised."  
 - **D)** "Blockchain uses cryptography which makes it unhackable, unlike normal databases."  
 
-**Your Answer:** [A/B/C/D]  
+**Your Answer:** [B]  
 
 **Your Explanation:**  
 [2–3 sentences explaining what makes this answer correct. What did you learn about why blockchain matters in Africa?]  
-
+With blockchain there is not middleman, there's no bank involved to authorize transactions or to even charger higher transaction fees. Nobody will be able to change the information or deny once it is on the blockchain.
 ---
 
 ## PART 2: DeFi & NFT Integration (Advanced Concepts)
@@ -103,16 +103,17 @@ A farmer asks: *"Why can't we just use a normal website with a database?"*
 - **C)** The liquidity provider experiences impermanent loss because the pool maintains a constant product rather than constant ratio. ERC-721 would be more suitable than ERC-1155 for the NFT marketplace since individual NFTs require unique transactions.  
 - **D)** The constant product formula prevents any impermanent loss by automatically rebalancing. DAOs cannot implement financial protections due to smart contract immutability. ERC-1155 tokens are incompatible with standard DEX protocols.  
 
-**Your Answer:** [A/B/C/D]  
+**Your Answer:** [B]  
 
 **Your Reasoning:**  
-
+Statement B resonates with the scenarion because if you can check the trader will receive USDC that was calculated using k. The scenario also mention the method of constant product formula. So its the consistency of the scenario and Statement that correctly combines understanding of AMMs, governance and technical implementation.
 - **AMM Mathematics:** How do you calculate the swap output? What happens to the liquidity provider's value?  
 - **DeFi Governance:** What is impermanent loss and how does protection work?  
 - **Token Standards:** Why might ERC-1155 be preferred over ERC-721 for marketplace integration?  
 
 [2–3 sentences synthesising these concepts into a coherent explanation]  
-
+You calculate AMM using x * y = k. 
+ERC-1155 might be prefered because it is cheaper, it has reputation mapping and it can be integrated with the likesof Uniswap for direct B2C (Business to consumer)
 ---
 
 ## SUBMISSION CHECKLIST
@@ -126,3 +127,4 @@ A farmer asks: *"Why can't we just use a normal website with a database?"*
 ---
 
 **Challenges faced:** [What was difficult? Which concepts are you less confident about?]  
+What was difficult was doing the calculation.

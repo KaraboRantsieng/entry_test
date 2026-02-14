@@ -27,6 +27,14 @@ contract SkillsMarketplace {
     // - Emit an event when a worker registers
     function registerWorker(string memory skill) public {
         // Your implementation here
+        function registerWorker(string memory skill) public {
+    require(!workers[msg.sender].registered, "Already registered");
+
+    workers[msg.sender] = Worker(true, skill);
+
+    emit WorkerRegistered(msg.sender, skill);
+}
+
     }
     
     // TODO: Implement postGig function
@@ -38,6 +46,27 @@ contract SkillsMarketplace {
     function postGig(string memory description, string memory skillRequired) public payable {
         // Your implementation here
         // Think: How do you safely hold the ETH until work is approved?
+        function postGig(string memory description, string memory skillRequired)
+    public
+    payable
+{
+    require(msg.value > 0, "Bounty must be greater than zero");
+
+    gigs.push(
+        Gig({
+            employer: msg.sender,
+            description: description,
+            skillRequired: skillRequired,
+            bounty: msg.value,
+            status: GigStatus.Open,
+            selectedWorker: address(0),
+            submissionUrl: ""
+        })
+    );
+
+    emit GigPosted(gigs.length - 1, msg.sender, msg.value);
+}
+
     }
     
     // TODO: Implement applyForGig function
@@ -48,6 +77,14 @@ contract SkillsMarketplace {
     // - Emit an event
     function applyForGig(uint256 gigId) public {
         // Your implementation here
+        function applyForGig(uint256 gigId) public {
+    require(hasApplied[gigId][msg.sender] == false, "Already applied");
+
+    hasApplied[gigId][msg.sender] = true;
+
+    emit AppliedForGig(gigId, msg.sender);
+}
+
     }
     
     // TODO: Implement submitWork function

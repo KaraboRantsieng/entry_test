@@ -14,7 +14,8 @@
 - How did you structure your state variables in `SkillsMarketplace` vs `SecureLottery`?
 - What trade-offs did you consider for storage efficiency?
 
-[Write your response here]
+[ According to Alchemy (solidity-mapping) Mappings act as hash tables that consist of key types and corresponding value type pairs and array as a collection of key-value pairs. So we should use Mapping when we want to store things like an address and use Array when we want things to be in order]./
+https://www.alchemy.com/docs/solidity-mappings
 
 ---
 
